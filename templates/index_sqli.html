@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Injection Demo</title>
+</head>
+<body>
+    <h1>Login</h1>
+    Here, username = `admin` and password is a random integer between 100000 and 500000, try successfully loging in. 
+    <form action="{{ url_for('login') }}" method="post">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username"><br>
+        <label for="password">Password:</label><br>
+        <input type="text" id="password" name="password"><br>
+        <button type="submit">Login</button>
+    </form>
+</body>
+</html>

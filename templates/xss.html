@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>XSS Demo</title>
+</head>
+<body>
+  <h1>XSS Demo</h1>
+  <div id="user-input">
+    <h2>User Input</h2>
+    <input type="text" id="input" placeholder="Enter your name">
+    <button onclick="showInput()">Submit</button>
+  </div>
+  <div id="output">
+    <h2>Output</h2>
+    <div id="output-text"></div>
+  </div>
+
+  <script>
+    function showInput() {
+      var userInput = document.getElementById('input').value;
+      document.getElementById('output-text').innerHTML = userInput;
+    }
+  </script>
+</body>
+</html>
